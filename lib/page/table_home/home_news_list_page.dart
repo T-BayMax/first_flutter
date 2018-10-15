@@ -3,8 +3,8 @@ import 'dart:convert';
 
 import 'package:first_flutter/Widgets/common_end_line.dart';
 import 'package:first_flutter/model/articles_model.dart';
-import 'package:first_flutter/page/table_home_page/tab_vector_home_page.dart';
-import 'package:first_flutter/page/table_home_page/vector_home_details_page.dart';
+import 'package:first_flutter/page/table_home/tab_vector_home_page.dart';
+import 'package:first_flutter/page/table_home/vector_home_details_page.dart';
 import 'package:first_flutter/util/net_utils.dart';
 import 'package:flutter/material.dart';
 

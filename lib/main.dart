@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:first_flutter/page/home_page.dart';
 import 'package:first_flutter/page/login_page.dart';
-import 'package:first_flutter/page/table_home_page/vector_home_details_page.dart';
+import 'package:first_flutter/page/table_home/vector_home_details_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {

@@ -1,5 +1,5 @@
 import 'package:first_flutter/api/api.dart';
-import 'package:first_flutter/page/table_home_page/home_news_list_page.dart';
+import 'package:first_flutter/page/table_home/home_news_list_page.dart';
 import 'package:flutter/material.dart';
 
 class TableVectorPage extends StatefulWidget {
@@ -29,8 +29,8 @@ class Choice {
 }
 
 List<Choice> choices = [
-  new Choice(title: '推荐', url: Api.NEWS_REC_LIST),
   new Choice(title: '热门', url: Api.NEWS_HOT_LIST, cid: '0'),
+  new Choice(title: '推荐', url: Api.NEWS_REC_LIST),
   new Choice(title: '科技', url: Api.NEWS_HOT_LIST, cid: '101000000'),
   new Choice(title: '创业', url: Api.NEWS_HOT_LIST, cid: '101040000'),
   new Choice(title: '数码', url: Api.NEWS_HOT_LIST, cid: '101050000'),
@@ -40,9 +40,7 @@ List<Choice> choices = [
 ];
 
 class _TableVectorPageState extends State<TableVectorPage> {
-  void _incrementCounter() {
-    setState(() {});
-  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -56,17 +54,26 @@ class _TableVectorPageState extends State<TableVectorPage> {
           // centerTitle: true,
           actions: <Widget>[
             new IconButton(
-                icon: new Icon(Icons.add_alarm),
-                tooltip: 'Add Alarm',
+                icon: new Icon(Icons.search),
+
+                tooltip: 'search',
                 onPressed: () {
                   // do nothing
                 }),
             new PopupMenuButton<String>(
                 itemBuilder: (BuildContext context) => <PopupMenuItem<String>>[
                       new PopupMenuItem<String>(
-                          value: "price", child: new Text('Sort by price')),
+                          value: "仅中文", child: new Text('仅中文')),
                       new PopupMenuItem<String>(
-                          value: "time", child: new Text('Sort by time')),
+                          value: "仅英文", child: new Text('仅英文')),
+                      new PopupMenuItem<String>(
+                          value: "中英混合", child: new Text('中英混合')),
+                      new PopupMenuItem<String>(
+                          value: "推荐设置", child: new Text('推荐设置')),
+                      new PopupMenuItem<String>(
+                          value: "定制频道", child: new Text('定制频道')),
+                      new PopupMenuItem<String>(
+                          value: "一周拾遗", child: new Text('一周拾遗')),
                     ],
                 onSelected: (String action) {
                   switch (action) {

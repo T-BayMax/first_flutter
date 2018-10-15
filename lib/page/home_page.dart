@@ -1,4 +1,7 @@
-import 'package:first_flutter/page/table_home_page/tab_vector_home_page.dart';
+import 'package:first_flutter/page/table_home/tab_vector_home_page.dart';
+import 'package:first_flutter/page/table_sites/tab_sites_page.dart';
+import 'package:first_flutter/page/table_topics/tab_topics_page.dart';
+import 'package:first_flutter/page/table_user_info/table_user_info_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +12,7 @@ class HomePage extends StatefulWidget {
 
 class HomeState extends State<HomePage> {
   int _tabIndex = 0;
-  final tabTextStyleNormal = new TextStyle(color: const Color(0xff969696));
+  final tabTextStyleNormal = new TextStyle(fontSize:14.0,color: const Color(0xff969696));
   final tabTextStyleSelected = new TextStyle(color: const Color(0xff63ca6c));
 
   var tabImages;
@@ -47,10 +50,10 @@ class HomeState extends State<HomePage> {
     _body = new IndexedStack(
       children: <Widget>[
         new TableVectorPage(title: '文章'),
-        new TableVectorPage(title: '站点'),
-        new TableVectorPage(title: '主题'),
-        new TableVectorPage(title: '专栏'),
-        new TableVectorPage(title: '我的')
+        new TabSitesPage(title: '站点'),
+        new TabTopicsPage(title: '主题'),
+        new UserInfoPage(title: '专栏'),
+        new UserInfoPage(title: '我的')
       ],
       index: _tabIndex,
     );
